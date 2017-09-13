@@ -16,5 +16,7 @@
 <body>
 
 <h1>My first project using PHP GULP BROWSERSYNC</h1>
+<p>I'm happy to do this</p>
+<a href="/admin/api/goods/get-list?category=meat">Test API</a>
 </body>
 </html>
