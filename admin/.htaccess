@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteBase /
+RewriteRule ^api/([a-z]+)/([a-z-]+)$ /admin/api/$1/$2.php
+
+RewriteRule ^about$ /admin/client/pages/index/index.php 
+
+
