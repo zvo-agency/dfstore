@@ -48,6 +48,24 @@ with this code:
 
 `systemctl restart apache2`
 
+`vim /etc/apache2/apache2.conf`
+Replace this code: 
+```
+<Directory /var/www/>
+  Options Indexes FollowSymLinks
+  AllowOverride None 
+  Require all granted
+</Directory>
+```
+with this code:
+```
+<Directory /var/www/>
+  Options Indexes FollowSymLinks
+  AllowOverride All 
+  Require all granted
+</Directory>
+``` 
+
 
 For install node_modules type:
 `npm i`
