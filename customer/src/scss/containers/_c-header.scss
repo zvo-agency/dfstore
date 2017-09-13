@@ -1,0 +1,271 @@
+.c-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  @extend .wrapper;
+  .c-navButton {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    @include a-mobile() {
+      display: block;
+    }
+  }
+  nav {
+    @include a-mobile() {
+      .c-navButton {
+        left: 20px;
+      }
+      $nav-width: 320px;
+      $border-color: #e2e2e2;  
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -$nav-width;
+      background-color: white;  
+      width: $nav-width;
+      transition: left 0.3s;
+      z-index: 500;
+      ul {
+        &.c-header__navGroup--first {
+          li:nth-child(1) {
+            border-top: 1px solid $border-color; 
+          }
+        }
+        li {
+          border-bottom: 1px solid $border-color; 
+          a {
+            display: block;
+            color: black;
+            text-align: left;
+            padding: 10px 10px 10px 20px;
+          }
+        }
+      }
+    }
+  }
+  &--white {
+    position: relative;
+    background-color: white;
+    .c-navButton {
+      div {
+        background-color: black;
+      }
+    }
+    .c-header {
+      &__navItemExtended {
+        a {
+          @include de() {
+            &:after {
+              border-color: black;
+            }
+          }
+        }
+      }
+      &__navGroup {
+        li {
+          a {
+            color: black;
+          }
+        }
+      }
+      &__logo {
+        img {
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(2) {
+            display: block;
+          }
+        }
+      }
+      &__button {
+        &--search {
+          span {
+            background-image: url('/customer/app/img/design/icon-search-black.svg');
+          }
+        }
+        &--liked {
+          span {
+            background-image: url('/customer/app/img/design/icon-heart-black.svg');
+            background-size: contain;
+          }
+        }
+        &--cart {
+          span {
+            background-image: url('/customer/app/img/design/icon-cart-black.svg');
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+  .inner {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include ad() {
+      padding-bottom: 10px;
+    }
+  }
+  &__navScrollable {
+    @include e-mobile() {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    @include a-mobile() {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-y: auto;
+    }
+  }
+  &__navItemExtended {
+    @include de() {
+      & > div {
+        &:after {
+          content: '';
+          position: absolute;
+          top: 7px;
+          right: -46px;
+          width: 58px;
+          height: 112px;
+          transform: rotate(-45deg);
+          display: none;  
+        }
+        &:hover {
+          height: 100px;
+          &:after {
+            display: block;
+          }
+        }
+      }
+      a {
+        &:after {
+          content: '';
+          display: block;
+          width: 5px;
+          height: 5px;
+          border-left: 2px solid white;
+          border-bottom: 2px solid white;
+          position: absolute;
+          top: 5px;
+          right: -15px;
+          transform: rotate(-45deg);
+          pointer-events: none;
+        }
+      }
+    }  
+  }
+  &__logo {
+    display: inline-block;
+    width: 237px;
+    img {
+      width: 100%;
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+    @include ad() {
+      width: 150px;
+      margin-left: -30px;
+    }
+  }
+  &__buttons {
+    position: absolute;
+    top: 47px;
+    right: 0;
+    font-size: 0;
+    @include ad() {
+      top: 30px;
+    }
+  }
+  &__button {
+    display: inline-block;
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+    span {
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+    &--search {
+      span {
+        background-image: url('/customer/app/img/design/icon-search-white.svg');
+        background-size: contain;
+      }
+    }
+    &--liked {
+      span {
+        background-image: url('/customer/app/img/design/icon-heart-white.svg');
+        background-size: contain;
+      }
+    }
+    &--cart {
+      span {
+        background-image: url('/customer/app/img/design/icon-cart-white.svg');
+        background-size: contain;
+      }
+    }
+  }
+  &__navGroup {
+    
+    @include e-mobile() {
+      $links-gap: 40px;
+      position: absolute;
+      top: 50px;
+      li {
+        display: inline-block;
+        a {
+          color: white;
+          font-size: 15px;
+          font-weight: bold;
+        }
+      }
+      &--first {
+        left: 0;
+        li {
+          &:not(:last-child) {
+            margin-right: $links-gap;
+          }
+        }
+      }
+      &--second {
+        right: 120px;
+        li {
+          &:not(:first-child) {
+            margin-left: $links-gap;
+          }
+        }
+      }
+    }
+    @include ad() {
+        top: 30px;
+    }
+    
+    @include a-mobile() {
+      top: 0;
+    }
+  } 
+}
+
+body.is-active {
+  .c-header {
+    nav {
+      @include a-mobile() {
+        left: 0;
+      }
+    }
+  }
+}

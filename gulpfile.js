@@ -5,45 +5,54 @@ var gulp         = require('gulp'),
 		rename       = require('gulp-rename'),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
-		uglify       = require('gulp-uglify');
+		uglify       = require('gulp-uglify'),
+    sourcemaps = require('gulp-sourcemaps'),
+    include = require('gulp-include'),
+    pump = require('pump');
 
-gulp.task('browser-sync', ['styles', 'scripts'], function() {
+gulp.task('browser-sync', ['scss-customer', 'js-customer', 'img-customer'], function() {
 		browserSync.init({
-			proxy: "127.0.0.1/admin",		
+			proxy: "127.0.0.1",		
 				notify: false
 		});
 });
 
-gulp.task('styles', function () {
-	return gulp.src('admin/client/src/sass/*.sass')
+gulp.task('scss-customer', function () {
+	return gulp.src('customer/src/scss/*.scss')
 	.pipe(sass({
 		includePaths: require('node-bourbon').includePaths
 	}).on('error', sass.logError))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false}))
 	.pipe(cleanCSS())
-	.pipe(gulp.dest('admin/client/app/css'))
+	.pipe(gulp.dest('customer/app/css/'))
 	.pipe(browserSync.stream());
 });
 
-gulp.task('scripts', function() {
-	return gulp.src([
-		'./app/libs/modernizr/modernizr.js',
-		'./app/libs/jquery/jquery-1.11.2.min.js',
-		'./app/libs/waypoints/waypoints.min.js',
-		'./app/libs/animate/animate-css.js',
-		])
-		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
-		.pipe(gulp.dest('./app/js/'));
+gulp.task('js-customer', function() {
+	return gulp.src('customer/src/js/main.js')
+    .pipe(sourcemaps.init())
+    .pipe(include())
+      .on('error', console.log)
+    .pipe(sourcemaps.write())
+		// .pipe(uglify()) 
+		.pipe(gulp.dest('customer/app/js/'))
+	  .pipe(browserSync.stream());
+});
+
+gulp.task('img-customer', function() {
+  return gulp.src('customer/src/img/**/*')
+     .pipe(gulp.dest('customer/app/img/'))
+     .pipe(browserSync.stream());
 });
 
 gulp.task('watch', function () {
-	gulp.watch('admin/client/src/sass/**/*.sass', ['styles']);
-	gulp.watch('app/libs/**/*.js', ['scripts']);
+	gulp.watch('customer/src/scss/**/*.scss', ['scss-customer']);
+	gulp.watch('customer/src/js/**/*.js', ['js-customer']);
+	gulp.watch('customer/src/img/**/*', ['img-customer']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);
-	gulp.watch('admin/**/*.php').on('change', browserSync.reload);
+	gulp.watch('**/*.php').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
