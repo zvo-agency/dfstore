@@ -4,7 +4,7 @@ RewriteEngine On
 RewriteRule ^api/([a-z]+)/([a-z-]+)$ /api/$1/$2.php
 
 # Redirects for ADMIN
-RewriteRule ^admin$ /admin/pages/index/index.php 
+RewriteRule ^backend$ /admin/pages/index/index.php 
 
 # Redirects for CUSTOMER
 RewriteRule ^index.php$ /customer/pages/index/index.php 
