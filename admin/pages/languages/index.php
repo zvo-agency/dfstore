@@ -1,5 +1,5 @@
 <?php 
-  $pageTitle = 'Main page | DFSTORE ADMIN';
+  $pageTitle = 'Languages | DFSTORE ADMIN';
   include $_SERVER['DOCUMENT_ROOT'] . '/admin/shared/_head.php';
 ?>
 <body>

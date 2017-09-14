@@ -7,11 +7,12 @@ html, body {
   border-spacing: 0;
   width: 100%;
   min-height: 100%;
-  font-family: 'Arial', sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   height: 100%;
 }
 body {
   box-sizing: border-box;
+  background-color: #f2f2f2;
 }
 div, h1, h2, h3, h4, h5, h6, ul, ol, li, a, p, span {
   position: relative;

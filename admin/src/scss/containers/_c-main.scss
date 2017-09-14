@@ -1,0 +1,14 @@
+.c-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  &__head {
+    flex-grow: 0;
+  }
+  &__body {
+    flex-grow: 1;
+  }
+  &__foot {
+    flex-grow: 0;
+  }
+}

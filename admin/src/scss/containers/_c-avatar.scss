@@ -1,0 +1,9 @@
+.c-avatar {
+  $avatar-gap: 16px;
+  $avatar-size: $header-height - $avatar-gap;
+  height: $avatar-size;
+  width: $avatar-size;
+  border-radius: $avatar-size;
+  background-color: $accent-color;
+  cursor: pointer;
+}

@@ -1,6 +1,6 @@
 function toggleNav() {
   var bodyEl = document.querySelector('body');
-  var headerEl = document.querySelector('.c-header');
+  var headerEl = document.querySelector('body');
   var isActiveNav = 0;
   var bodyMask = document.createElement('div');
   bodyMask.onclick = function() {

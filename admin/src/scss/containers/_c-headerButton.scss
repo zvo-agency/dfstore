@@ -1,0 +1,23 @@
+.c-headerButton {
+  display: flex;
+  height: $header-height;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: 0.3s;
+  border-bottom: 5px solid transparent;
+  box-sizing: border-box;
+  padding-top: 5px;
+  &:hover {
+    border-bottom-color: $accent-color;
+    span {
+      color: $accent-color;
+    }
+  }
+  span {
+    color: $buttons-color;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: inherit;
+  }
+}

@@ -1,0 +1,40 @@
+.c-navList {
+  position: fixed;
+  top: $header-height;
+  left: -$nav-list-width;
+  bottom: 0;
+  z-index: 900;
+  width: $nav-list-width;
+  background-color: #e6e6e6;
+  transition: 0.3s;
+  border-right: 1px solid #ccc;
+  ul {
+    li {
+      a {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        color: $buttons-color;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 100;
+        border-bottom: 1px solid #ccc;
+        margin-top: -1px;
+        transition: 0.3s;
+        &:hover {
+          transition: 0.3s;
+          border-bottom-color: $accent-color;
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
+body {
+  &.is-active-nav {
+    .c-navList {
+      left: 0;
+    }
+  }
+}

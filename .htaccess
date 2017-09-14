@@ -5,6 +5,14 @@ RewriteRule ^api/([a-z]+)/([a-z-]+)$ /api/$1/$2.php
 
 # Redirects for ADMIN
 RewriteRule ^backend$ /admin/pages/index/index.php 
+RewriteRule ^backend/products$ /admin/pages/products/index.php 
+RewriteRule ^backend/categories$ /admin/pages/categories/index.php 
+RewriteRule ^backend/orders$ /admin/pages/orders/index.php 
+RewriteRule ^backend/pages$ /admin/pages/pages/index.php 
+RewriteRule ^backend/users$ /admin/pages/users/index.php 
+RewriteRule ^backend/statistics$ /admin/pages/statistics/index.php 
+RewriteRule ^backend/users/profile$ /admin/pages/profile/index.php 
+RewriteRule ^backend/languages$ /admin/pages/languages/index.php 
 
 # Redirects for CUSTOMER
 RewriteRule ^index.php$ /customer/pages/index/index.php 
