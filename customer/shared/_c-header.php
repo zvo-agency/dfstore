@@ -15,7 +15,7 @@
         <ul class="c-header__navGroup c-header__navGroup--first">
           <li class="c-header__navItemExtended">
             <div onmouseover="overExtendedItem()" onmouseout="outExtendedItem()">
-              <a href="/products.html">ТОВАРЫ</a>
+              <a href="/products">ТОВАРЫ</a>
             </div>
           </li>
           <li><a href="">О НАС</a></li>
@@ -31,7 +31,7 @@
     <ul class="c-header__buttons">
       <li class="c-header__button c-header__button--search"><span></span></li>
       <li class="c-header__button c-header__button--liked"><span></span></li>
-      <li class="c-header__button c-header__button--cart"><span></span></li>
+      <li class="c-header__button c-header__button--cart" onclick="toggleCart()"><span></span></li>
     </ul>
   </div>
 </div>

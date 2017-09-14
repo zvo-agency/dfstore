@@ -1,7 +1,6 @@
-function toggleNav() {
+function toggleCart() {
   var bodyEl = document.querySelector('body');
-  var headerEl = document.querySelector('.c-header');
-  var isActiveNav = 0;
+  var isActiveCart = 0;
   var bodyMask = document.createElement('div');
   bodyMask.onclick = function() {
     toggleIsActive();
@@ -9,27 +8,27 @@ function toggleNav() {
   toggleIsActive();
 
   function toggleIsActive() {
-    if(bodyEl.classList.contains('is-active-nav')) 
-      isActiveNav = 1;
-    if(isActiveNav) {
+    if(bodyEl.classList.contains('is-active-cart')) 
+      isActiveCart = 1;
+    if(isActiveCart) {
       bodyMask = document.querySelector('.c-bodyMask');
       bodyMask.style.opacity = 0;
       bodyMask.style.pointerEvents = 'none';
       setTimeout(function() {
-        headerEl.removeChild(bodyMask);
+        bodyEl.removeChild(bodyMask);
       }, 900);
 
-      bodyEl.classList.remove('is-active-nav');
+      bodyEl.classList.remove('is-active-cart');
     } else {
       bodyMask.className = 'c-bodyMask';
-      headerEl.appendChild(bodyMask);
+      bodyEl.appendChild(bodyMask);
       bodyMask.classList.add('c-bodyMask--animate');
       bodyMask.style.pointerEvents = 'all';
       setTimeout(function() {
         bodyMask.style.opacity = 1;
       }, 30);
 
-      bodyEl.classList.add('is-active-nav');
+      bodyEl.classList.add('is-active-cart');
     } 
   }
 }

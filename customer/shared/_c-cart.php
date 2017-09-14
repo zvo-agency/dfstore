@@ -1,5 +1,5 @@
 <div class="c-cart">
-  <div class="c-cart__closeButton">×</div>
+  <div class="c-cart__closeButton" onclick="toggleCart()">×</div>
   <div class="c-cart__innerFlex">
     <div class="c-cart__header">
       <h2>Корзина</h2>

@@ -9,11 +9,11 @@
           <li class="c-extendedNav__itemAccent"><a href="#">Sale</a></li>
         </ul>
         <ul id="jsDataImagesList">
-          <li><a href="#" data-img="/app/img/content/extendedNav/item-1.jpg">Комбинезоны</a></li>
-          <li><a href="#" data-img="/app/img/content/extendedNav/item-2.jpg">Комплекты</a></li>
+          <li><a href="#" data-img="/customer/app/img/content/extendedNav/item-1.jpg">Комбинезоны</a></li>
+          <li><a href="#" data-img="/customer/app/img/content/extendedNav/item-2.jpg">Комплекты</a></li>
           <li><a href="#">DF pro</a></li>
           <li><a href="#">Леггинсы</a></li>
-          <li><a href="#" data-img="/app/img/content/extendedNav/item-3.png">Топы</a></li>
+          <li><a href="#" data-img="/customer/app/img/content/extendedNav/item-3.png">Топы</a></li>
           <li><a href="#">Шорты</a></li>
           <li><a href="#">Футболки</a></li>
           <li><a href="#">Аксессуары</a></li>
@@ -27,7 +27,7 @@ No one likes to have teeth that are not bright and white. Teeth are a very impor
       </div>
     </div>
   </div>
-  <div class="c-extendedNav__images" style="background-image: url('/app/img/content/extendedNav/item-1.jpg')">
+  <div class="c-extendedNav__images" style="background-image: url('/customer/app/img/content/extendedNav/item-1.jpg')">
     <div class="c-extendedNav__imageItem" id="jsExtendedNavImg"></div> 
   </div>
 </div>

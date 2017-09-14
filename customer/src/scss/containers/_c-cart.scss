@@ -3,12 +3,14 @@
   $footerHeight: 150px;
   $paddingLeft: 45px;
   $paddingRight: 60px;
+  $cartWidth: 500px;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -$cartWidth;
   bottom: 0;
-  width: 500px;
+  width: $cartWidth;
   background-color: white;
+  transition: 0.3s;
   z-index: 1000;
   .c-cartItem {
     &:not(:last-child) {
@@ -83,3 +85,10 @@
   }  
 }
 
+body {
+  &.is-active-cart {
+    .c-cart {
+      right: 0;
+    }
+  }
+}

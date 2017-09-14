@@ -1,7 +1,6 @@
 .c-navButton {
   $nav-button-width: 30px;
   $nav-button-line-height: 3px;
-
   display: block;
   width: $nav-button-width;
   height: $nav-button-width - 8;
@@ -29,7 +28,7 @@
     }
   }
 }
-body.is-active {
+body.is-active-nav {
     .c-navButton {
         div {
             @extend .transition-hover;

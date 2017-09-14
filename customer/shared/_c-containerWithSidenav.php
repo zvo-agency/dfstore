@@ -1,9 +1,10 @@
 <div class="c-containerWithSidenav">
   <div class="inner">
     <div class="c-containerWithSidenav__top">
-      @@include('_c-breadcrumbs.html', {
-        "currentPage" : "Комбинезоны"
-      })
+      <?php 
+        $currentPage = "Комбинезоны";
+        include $_SERVER['DOCUMENT_ROOT'] . '/customer/shared/_c-breadcrumbs.php';
+      ?>
     </div>
     <div class="c-containerWithSidenav__columns">
       <div class="c-containerWithSidenav__sidenavColumn">

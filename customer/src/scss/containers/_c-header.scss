@@ -28,7 +28,7 @@
       background-color: white;  
       width: $nav-width;
       transition: left 0.3s;
-      z-index: 500;
+      z-index: 900;
       ul {
         &.c-header__navGroup--first {
           li:nth-child(1) {
@@ -260,7 +260,7 @@
   } 
 }
 
-body.is-active {
+body.is-active-nav {
   .c-header {
     nav {
       @include a-mobile() {

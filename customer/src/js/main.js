@@ -5,4 +5,5 @@
 
 //=require functions/toggleNav.js
 //=require functions/toggleFilterItem.js
+//=require functions/toggleCart.js
 

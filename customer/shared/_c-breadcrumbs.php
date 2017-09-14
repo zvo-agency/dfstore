@@ -7,7 +7,7 @@
       <a href="/products.html">Товары</a>
     </li>
     <li>
-      <a>@@currentPage</a>
+      <a><?=$currentPage?></a>
     </li>
   </ul>
 </div>
