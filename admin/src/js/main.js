@@ -4,4 +4,7 @@
 //=require other/app.js
 
 //=require functions/toggleNav.js
+//=require functions/addCategory.js
+
+//=require pages/addCategory.js
 
