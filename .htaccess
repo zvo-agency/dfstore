@@ -6,7 +6,11 @@ RewriteRule ^api/([a-z]+)/([a-z-]+)$ /api/$1/$2.php
 # Redirects for ADMIN
 RewriteRule ^backend$ /admin/pages/index/index.php 
 RewriteRule ^backend/products$ /admin/pages/products/index.php 
+RewriteRule ^backend/products/add_product$ /admin/pages/add_product/index.php 
+RewriteRule ^backend/categories/add_category$ /admin/pages/add_category/index.php 
 RewriteRule ^backend/categories$ /admin/pages/categories/index.php 
+RewriteRule ^backend/complects$ /admin/pages/complects/index.php 
+RewriteRule ^backend/complects/add_complect$ /admin/pages/add_complect/index.php 
 RewriteRule ^backend/orders$ /admin/pages/orders/index.php 
 RewriteRule ^backend/pages$ /admin/pages/pages/index.php 
 RewriteRule ^backend/users$ /admin/pages/users/index.php 

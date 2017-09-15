@@ -1,5 +1,5 @@
 <?php 
-  $pageTitle = 'Orders | DFSTORE ADMIN';
+  $pageTitle = 'Add complect | DFSTORE ADMIN';
   include $_SERVER['DOCUMENT_ROOT'] . '/admin/shared/_head.php';
 ?>
 <body>
@@ -13,12 +13,12 @@
       <div class="c-content">
         <div class="c-content__inner">
           <?php 
-            $pageHeaderText = "Orders";
+            $pageHeaderText = "Add complect";
             
             include $_SERVER['DOCUMENT_ROOT'] . '/admin/shared/_c-pageHeader.php';
           ?>    
         </div>
-      </div>
+      </div> 
     </div>
     <div class="c-main__foot">
       <?php 

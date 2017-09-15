@@ -1,0 +1,21 @@
+.c-pageHeader {
+  padding-top: 40px;
+  h1 {
+    font-size: 40px;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  &__bodyFlex {
+    display: flex;
+  }
+  &__breadcrumbsWrap {
+    padding-left: 3px;
+  }
+  &__bodyColumn {
+    display: flex;
+    align-items: center;
+    &:first-child {
+      flex-grow: 1;
+    }
+  }
+}

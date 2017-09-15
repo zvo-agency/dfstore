@@ -1,0 +1,33 @@
+.c-panelCard {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: black;
+  font-size: 17px;
+  &:hover {
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.15);
+  }
+  &--addMode {
+    background-color: $accent-color;
+    color: white;
+  }
+  &__plus {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -8px;
+  }
+  &__count {
+    font-size: 40px;
+    margin-top: 10px;
+  } 
+  &__titlePrefix {
+    margin-bottom: 5px;
+  }
+}

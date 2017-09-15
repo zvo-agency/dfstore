@@ -1,28 +1,15 @@
 .c-breadcrumbs {
-  padding-bottom: 6px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
   ul {
     * {
-      color: #a2a2a2;
+      color: black;
     }
     li {
       display: inline-block;
-      &:not(:last-child) {
-        &:after {
-          content: '>';
-          display: inline-block;
-          font-size: 10px;
-          margin-right: 4px;
-        }
-      }
-      &:last-child {
-        a {
-          color: #343434;
-        }
-      }
       a {
-        font-size: 14px;
+        font-size: 12px;
         margin-right: 3px;
+        text-transform: uppercase;
+        text-decoration: underline;
       }
     }
   }

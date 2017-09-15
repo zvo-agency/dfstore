@@ -10,7 +10,16 @@
       ?>
     </div>
     <div class="c-main__body">
-
+      <div class="c-content">
+        <div class="c-content__inner">
+          <?php 
+            $pageHeaderText = "Users";
+            $pageHeaderButtonText = "Add user";
+            $pageHeaderButtonLink = "/backend/users/add_user";
+            include $_SERVER['DOCUMENT_ROOT'] . '/admin/shared/_c-pageHeader.php';
+          ?>    
+        </div>
+      </div>
     </div>
     <div class="c-main__foot">
       <?php 

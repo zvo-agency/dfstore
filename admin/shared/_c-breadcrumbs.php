@@ -1,13 +1,7 @@
 <div class="c-breadcrumbs">
   <ul>
     <li>
-      <a href="/index.html">Главная</a>
-    </li>
-    <li>
-      <a href="/products.html">Товары</a>
-    </li>
-    <li>
-      <a><?=$currentPage?></a>
+      <a href="/backend">Главная</a>
     </li>
   </ul>
 </div>
