@@ -57,6 +57,7 @@
                 "link"=>"/backend/categories/add_category"
               ],
               [
+                "id"=>"panel_card_colors",
                 "title"=>"Colors",
                 "link"=>"/backend/colors"
               ],

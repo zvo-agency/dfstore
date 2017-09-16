@@ -46,6 +46,7 @@ a {
 input, textarea {
   background-color: transparent;
   border: none;
+  box-sizing: border-box;
   &:focus {
     outline: none;
   }

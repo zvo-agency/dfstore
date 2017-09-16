@@ -17,6 +17,9 @@ RewriteRule ^backend/users$ /admin/pages/users/index.php
 RewriteRule ^backend/statistics$ /admin/pages/statistics/index.php 
 RewriteRule ^backend/users/profile$ /admin/pages/profile/index.php 
 RewriteRule ^backend/languages$ /admin/pages/languages/index.php 
+RewriteRule ^backend/colors/add_color$ /admin/pages/add_color/index.php 
+RewriteRule ^backend/colors$ /admin/pages/colors/index.php 
+
 
 # Redirects for CUSTOMER
 RewriteRule ^index.php$ /customer/pages/index/index.php 
