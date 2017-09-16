@@ -3,6 +3,7 @@
   if(widget) {
     setCategoriesCount();
     setColorsCount();
+    setSizesCount();
   }
 
   function setCategoriesCount() {
@@ -41,6 +42,26 @@
 
         colorsCardCounter = widget.querySelector('#panel_card_colors .c-panelCard__count');
         colorsCardCounter.innerHTML = colorsLength;
+      }
+    });
+  }
+
+  function setSizesCount() {
+    var sizesJSON,
+        sizesLength,
+        sizesCounter,
+        sizesCounterText;
+
+    $.ajax({
+      type: "POST",
+      url: apiServerUrl + "/api/sizes/get-list",
+      data: '',
+      success: function(data) {
+        sizesJSON = JSON.parse(data);
+        sizesLength = sizesJSON.items.length;
+
+        sizesCardCounter = widget.querySelector('#panel_card_sizes .c-panelCard__count');
+        sizesCardCounter.innerHTML = sizesLength;
       }
     });
   }

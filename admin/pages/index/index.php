@@ -68,6 +68,7 @@
                 "link"=>"/backend/colors/add_color"
               ],
               [
+                "id"=>"panel_card_sizes",
                 "title"=>"Sizes",
                 "link"=>"/backend/sizes"
               ],

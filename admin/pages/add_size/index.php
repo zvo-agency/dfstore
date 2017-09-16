@@ -1,5 +1,5 @@
 <?php 
-  $pageTitle = 'Add color | DFSTORE ADMIN';
+  $pageTitle = 'Add size | DFSTORE ADMIN';
   include $_SERVER['DOCUMENT_ROOT'] . '/admin/shared/_head.php';
 ?>
 <body>
@@ -13,7 +13,7 @@
       <div class="c-content">
         <div class="c-content__inner">
           <?php 
-            $pageHeaderText = "Add color";
+            $pageHeaderText = "Add size";
             
             include $_SERVER['DOCUMENT_ROOT'] . '/admin/shared/_c-pageHeader.php';
           ?>    
@@ -21,43 +21,25 @@
       </div> 
       <div class="c-content">
         <div class="c-content__inner">
-          <form class="c-form" id="add_color_form">
+          <form class="c-form" id="add_size_form">
             <div class="c-form__flex">
               <div class="c-form__column c-form__column--main">
                 <div class="c-form__row">
                   <?php 
                     $input = array(
-                      "label" => "Name",
+                      "label" => "size label, like XS",
                       "type" => "text",
-                      "id" => "color_name",
-                      "name" => "name",
+                      "id" => "size_label",
+                      "name" => "label",
                       "value" => "",
                       "placeholder" => "Type here"
                     );
                     include $_SERVER['DOCUMENT_ROOT'] . '/admin/shared/formkit/_c-input.php';
-                  ?>
-                </div>
-                <div class="c-form__row">
-                  <?php 
-                    $input = array(
-                      "label" => "rgb code, like #223344",
-                      "type" => "text",
-                      "id" => "color_code",
-                      "name" => "code",
-                      "value" => "",
-                      "placeholder" => "Type here"
-                    );
-                    include $_SERVER['DOCUMENT_ROOT'] . '/admin/shared/formkit/_c-input.php';
-                  ?>
-                </div>
-                <div class="c-form__row">
-                  <?php 
-                    include $_SERVER['DOCUMENT_ROOT'] . '/admin/shared/formkit/_c-colorViewer.php';
                   ?>
                 </div>
                 <div class="c-form__row">
                   <div class="c-form__status c-form__status--success">
-                    <p>Color is added</p>
+                    <p>Size is added</p>
                   </div>
                   <div class="c-form__status c-form__status--error">
                     <p>Some error, please try again</p>
@@ -66,7 +48,7 @@
                 <div class="c-form__row">
                   <?php
                     $submitButton= array(
-                      "id" => "color_submit",
+                      "id" => "size_submit",
                       "text" => "Save"
                     );
                     include $_SERVER['DOCUMENT_ROOT'] . '/admin/shared/formkit/_c-submitButton.php';

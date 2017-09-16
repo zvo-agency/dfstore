@@ -1,7 +1,7 @@
 var devOrProd;
 var apiServerUrl;
 
-devOrProd = 'prod';
+devOrProd = 'dev';
 
 if(devOrProd === 'dev') {
   apiServerUrl = 'http://localhost';

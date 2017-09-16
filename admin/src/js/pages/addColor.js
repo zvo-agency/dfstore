@@ -15,7 +15,7 @@
   var addColorForm = document.querySelector('#add_color_form');
 
   if (addColorForm) {
-    var submitButton = addColorForm.querySelector('#category_submit');
+    var submitButton = addColorForm.querySelector('#color_submit');
 
     submitButton.addEventListener('click', function(event) {
       event.preventDefault();
