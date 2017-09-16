@@ -1,3 +1,5 @@
+//=require config.js
+
 //=require other/jquery.min.js
 //=require other/slick.js
 //=require other/underscore-min.js

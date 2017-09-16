@@ -13,7 +13,7 @@
 
     $.ajax({
       type: "POST",
-      url: "http://localhost:3000/api/categories/get-list",
+      url: apiServerUrl + "/api/categories/get-list",
       data: '',
       success: function(data) {
         categoriesJSON = JSON.parse(data);
@@ -33,7 +33,7 @@
 
     $.ajax({
       type: "POST",
-      url: "http://localhost:3000/api/colors/get-list",
+      url: apiServerUrl + "/api/colors/get-list",
       data: '',
       success: function(data) {
         colorsJSON = JSON.parse(data);

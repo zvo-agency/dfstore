@@ -3,7 +3,6 @@
   if(colorViewer) {
     var colorCode = document.querySelector('#color_code');
     if(colorCode) {
-      console.log('ok');
       addEventListenerMulti(colorCode, "click keyup", function() {
         var colorValue = this.value;
         colorViewer.style.backgroundColor = colorValue;

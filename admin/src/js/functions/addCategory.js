@@ -8,7 +8,7 @@ function addCategory() {
   toggleFormStatus(form, 'c-form--waitStatus');
   $.ajax({
     type: "POST",
-    url: "http://localhost/api/category/create",
+    url: apiServerUrl + "/api/category/create",
     data: data,
     success: function(data) {
       var dataObj = JSON.parse(data);

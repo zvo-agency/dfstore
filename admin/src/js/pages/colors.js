@@ -5,7 +5,7 @@
 
     $.ajax({
       type: "POST",
-      url: "http://localhost:3000/api/colors/get-list",
+      url: apiServerUrl + "/api/colors/get-list",
       data: '',
       success: function(data) {
         colorsJSON = JSON.parse(data);

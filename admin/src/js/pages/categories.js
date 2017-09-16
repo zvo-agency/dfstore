@@ -5,7 +5,7 @@
 
     $.ajax({
       type: "POST",
-      url: "http://localhost:3000/api/categories/get-list",
+      url: apiServerUrl + "/api/categories/get-list",
       data: '',
       success: function(data) {
         categoriesJSON = JSON.parse(data);

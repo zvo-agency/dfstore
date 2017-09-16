@@ -8,7 +8,7 @@ function addColor() {
   toggleFormStatus(form, 'c-form--waitStatus');
   $.ajax({
     type: "POST",
-    url: "http://localhost/api/color/create",
+    url: apiServerUrl + "/api/color/create",
     data: data,
     success: function(data) {
       var dataObj = JSON.parse(data);
