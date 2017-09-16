@@ -8,6 +8,9 @@
   border-bottom: 5px solid transparent;
   box-sizing: border-box;
   padding-top: 5px;
+  @include ac() {
+    display: none;
+  }
   &:hover {
     border-bottom-color: $accent-color;
     span {
