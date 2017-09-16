@@ -10,6 +10,7 @@
       ?>
     </div>
     <div class="c-main__body">
+
       <div class="c-content">
         <div class="c-content__inner">
           <?php 
@@ -20,6 +21,14 @@
           ?>    
         </div>
       </div>
+      <div class="c-content">
+        <div class="c-content__inner">
+          <div id="categories_list">
+            
+          </div>    
+        </div>
+      </div>
+
     </div>
     <div class="c-main__foot">
       <?php 

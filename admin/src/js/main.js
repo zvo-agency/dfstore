@@ -5,6 +5,11 @@
 
 //=require functions/toggleNav.js
 //=require functions/addCategory.js
+//=require functions/clearFields.js
 
 //=require pages/addCategory.js
+//=require pages/categories.js
+
+//=require plugins/formStatus.js
+//=require plugins/panelWidget.js
 

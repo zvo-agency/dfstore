@@ -4,7 +4,8 @@ function addCategory() {
     name: form.querySelector('#category_name').value,
     description: form.querySelector('#category_description').value
   }
-  console.log(data);
+  var fieldsToClear = ['#category_name', '#category_description'];
+  toggleFormStatus(form, 'c-form--waitStatus');
   $.ajax({
     type: "POST",
     url: "http://localhost/api/category/create",
@@ -13,9 +14,15 @@ function addCategory() {
       var dataObj = JSON.parse(data);
       
       if(dataObj.result == 'success') {
-        console.log('Category is created!');
+        toggleFormStatus(form, 'c-form--waitStatus');
+        toggleFormStatus(form, 'c-form--successStatus');
+        clearFields(fieldsToClear);
+        setTimeout(function() {
+          toggleFormStatus(form, 'c-form--successStatus');
+        }, 1000);
       } else {
-        console.log('error');
+        toggleFormStatus(form, 'c-form--waitStatus');
+        toggleFormStatus(form, 'c-form--errorStatus');
       }
     }
   });

@@ -43,8 +43,18 @@ table, td, th {
 a {
   text-decoration: none;
 }
-input {
+input, textarea {
+  background-color: transparent;
+  border: none;
   &:focus {
     outline: none;
   }
+  &::placeholder {
+    font-family: "Roboto";
+    color: grey;
+  }
+
+}
+textarea {
+  resize: none;
 }

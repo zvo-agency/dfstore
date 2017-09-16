@@ -1,0 +1,35 @@
+.c-form {
+  padding-top: 30px;
+  &--waitStatus {
+    pointer-events: none;
+    .c-submitButton {
+      .c-spinner {
+        opacity: 1; 
+      }
+    }
+  }
+  &--successStatus {
+    .c-form {
+      &__status {
+        &--success {
+          display: block;
+        }
+      }
+    }
+  }
+  &--errorStatus {
+    .c-form {
+      &__status {
+        &--error {
+          display: block;
+        }
+      }
+    }
+  }
+  &__status {
+    display: none;
+  }  
+  &__row {
+    padding-bottom: 15px;
+  }  
+}

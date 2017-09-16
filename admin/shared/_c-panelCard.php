@@ -13,6 +13,6 @@
     </div>
   <?php else : ?>
     <div class="c-panelCard__title"><?=$panelCards[$x]["title"];?></div>
-    <div class="c-panelCard__count"><?=$panelCards[$x]["count"];?></div>
+    <div class="c-panelCard__count"><span style="opacity:0;">0</span></div>
   <?php endif; ?>
 </a>

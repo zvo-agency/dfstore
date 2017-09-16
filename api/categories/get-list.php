@@ -8,20 +8,11 @@ header('Access-Control-Allow-Methods: GET, POST');
 try {
   $db = db();
 
-  if ($_GET['category'] === 'meat')
-    $table = 'prod_meat';
-  else if ($_GET['category'] === 'accessoire')
-    $table = 'prod_accessoire';
-  else
-    throw new Exception('$_GET["category"] must be "meat" or "accessoire"');
-
-  $stmt = $db->prepare("
+    $stmt = $db->prepare("
     SELECT
-      `id`, `name`, `price`, `currency`, `unit`, `description`, `image`
+      `id`, `name`, `description`
     FROM
-      `$table`
-    WHERE
-      `display` = 1
+      `categories`
   ");
 
   $stmt->execute();

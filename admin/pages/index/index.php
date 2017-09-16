@@ -10,13 +10,12 @@
       ?>
     </div>
     <div class="c-main__body">
-      <div class="c-mainPanel">
+      <div class="c-mainPanel" id="panel_widget">
         <div class="c-mainPanel__inner">
           <div class="c-mainPanel__cards"> 
             <?php 
               $panelCards = array([
                 "title"=>"Products",
-                "count"=>"254",
                 "link"=>"/backend/products"
               ],
               [
@@ -28,7 +27,6 @@
               [
                 "id"=>"panel_card_orders",
                 "title"=>"Orders",
-                "count"=>"321",
                 "link"=>"/backend/orders"
               ],
               [
@@ -39,7 +37,6 @@
               ],
               [
                 "title"=>"Complects",
-                "count"=>"34",
                 "link"=>"/backend/complects"
               ],
               [
@@ -49,8 +46,8 @@
                 "link"=>"/backend/complects/add_complect"
               ],
               [
+                "id"=>"panel_card_categories",
                 "title"=>"Categories",
-                "count"=>"8",
                 "link"=>"/backend/categories"
               ],
               [
@@ -61,7 +58,6 @@
               ],
               [
                 "title"=>"Colors",
-                "count"=>"9",
                 "link"=>"/backend/colors"
               ],
               [
@@ -72,7 +68,6 @@
               ],
               [
                 "title"=>"Sizes",
-                "count"=>"7",
                 "link"=>"/backend/sizes"
               ],
               [
@@ -83,12 +78,10 @@
               ],
               [
                 "title"=>"Pages",
-                "count"=>"16",
                 "link"=>"/backend/pages"
               ],
               [
                 "title"=>"Users",
-                "count"=>"2",
                 "link"=>"/backend/users"
               ],
               [
@@ -99,7 +92,6 @@
               ],
               [
                 "title"=>"Customers",
-                "count"=>"235",
                 "link"=>"/backend/customers"
               ],
               [
@@ -111,7 +103,6 @@
               [
                 "id"=>"panel_card_messages",
                 "title"=>"Messages",
-                "count"=>"121",
                 "link"=>"/backend/messages"
               ],
               [
@@ -123,7 +114,6 @@
               [
                 "id"=>"panel_card_reviews",
                 "title"=>"Reviews",
-                "count"=>"121",
                 "link"=>"/backend/reviews"
               ],
               [
@@ -134,7 +124,6 @@
               ],
               [
                 "title"=>"Languages",
-                "count"=>"2",
                 "link"=>"/backend/languages"
               ],
               [

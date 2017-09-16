@@ -1,7 +1,9 @@
 <div class="c-input">
-  <div class="c-input__row">
-  <label><?=$input["label"]?></label>
-  </div>
+  <?php if($input["label"]) : ?>
+    <div class="c-input__row">
+      <label><?=$input["label"]?></label>
+    </div>
+  <?php endif; ?>
   <div class="c-input__row">
     <input type="<?=$input["type"]?>"
            name="<?=$input["name"]?>"

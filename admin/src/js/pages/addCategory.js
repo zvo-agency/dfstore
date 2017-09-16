@@ -8,7 +8,6 @@
       event.preventDefault();
 
       addCategory();
-      console.log('sending form...');
     });
   }
 })();
