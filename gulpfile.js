@@ -86,7 +86,7 @@ gulp.task('watch', function () {
 	gulp.watch('customer/src/scss/**/*.scss', ['scss-customer']);
 	gulp.watch('customer/src/js/**/*.js', ['js-customer']);
 	gulp.watch('customer/src/img/**/*', ['img-customer']);
-  // CUSTOMER
+  // ADMIN 
 	gulp.watch('admin/src/scss/**/*.scss', ['scss-admin']);
 	gulp.watch('admin/src/js/**/*.js', ['js-admin']);
 	gulp.watch('admin/src/img/**/*', ['img-admin']);
