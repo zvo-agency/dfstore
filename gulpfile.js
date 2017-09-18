@@ -12,7 +12,7 @@ var gulp         = require('gulp'),
 
 gulp.task('browser-sync', function() {
 		browserSync.init({
-			proxy: "127.0.0.1",		
+			proxy: "dfstore.ua",		
 				notify: false
 		});
 });
