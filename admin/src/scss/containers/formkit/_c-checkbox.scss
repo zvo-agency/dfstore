@@ -1,0 +1,27 @@
+.c-checkbox {
+  $circle-size: 12px;
+  display: inline-block;
+  label {
+    padding-left: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+  }
+  &__box {
+    display: block;
+    width: $circle-size;
+    height: $circle-size;
+    border: 1px solid $input-border-color; 
+    position: absolute;
+    top: 3px;
+    left: 0;
+    z-index: 10;
+  } 
+  input {
+    &:checked {
+      & + .c-checkbox__box{
+        background-color: red;
+      }
+    }
+  }
+}

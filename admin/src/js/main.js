@@ -1,7 +1,6 @@
 //=require config.js
 
 //=require other/jquery.min.js
-//=require other/slick.js
 //=require other/underscore-min.js
 
 //=require functions/toggleNav.js
@@ -17,6 +16,7 @@
 //=require pages/sizes.js
 //=require pages/addColor.js
 //=require pages/addSize.js
+//=require pages/addProduct.js
 
 //=require plugins/formStatus.js
 //=require plugins/panelWidget.js

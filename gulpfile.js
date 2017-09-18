@@ -68,7 +68,7 @@ gulp.task('js-admin', function() {
     .pipe(include())
       .on('error', console.log)
     .pipe(sourcemaps.write())
-		// .pipe(uglify()) 
+	//	 .pipe(uglify()) 
 		.pipe(gulp.dest('admin/app/js/'))
 	  .pipe(browserSync.stream());
 });

@@ -1,13 +1,13 @@
-.c-textarea {
+.c-select {
   label {
     @extend .input-label;
   }
-  textarea {
+  select {
     border: 1px solid $input-border-color;
     border-radius: $input-border-radius;
+    min-width: $input-min-width;
     font-size: 16px;
     padding: 7px 20px 7px 10px;
-    min-width: $input-min-width;
-    height: 100px;
+    background-color: #e8e8e8;
   }
 }

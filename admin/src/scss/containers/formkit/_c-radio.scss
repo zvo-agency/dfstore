@@ -1,0 +1,77 @@
+.c-radio {
+  $circle-size: 12px;
+  display: inline-block;
+  label {
+    padding-left: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+  }
+  &__circle {
+    display: block;
+    width: $circle-size;
+    height: $circle-size;
+    border: 1px solid $input-border-color; 
+    border-radius: $circle-size;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    z-index: 10;
+  } 
+  input {
+    &:checked {
+      & + .c-radio__circle {
+        background-color: red;
+      }
+    }
+  }
+  &--color {
+    $group-circle-size: 24px;
+    display: flex;
+    input {
+      &:checked {
+        & + .c-radio {
+          &__group {
+            border-color: black;
+            .c-radio {
+              &__groupLabel {
+                color: black;
+              }
+              &__groupCircle {
+              }
+            }
+          }
+        }
+      }
+    } 
+    label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+     }
+    .c-radio {
+      &__group {
+        border: 1px solid $input-border-color;
+        border-radius: $input-border-radius;
+        height: $group-circle-size + 10px;
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 5px;
+      }       
+      &__groupCircle {
+        width: $group-circle-size;
+        height: $group-circle-size;
+        border-radius: $group-circle-size;
+      }
+      &__groupLabel {
+        text-transform: uppercase;
+        margin-left: 5px;
+        font-size: 12px;
+        color: grey;
+      }
+    }
+  }
+}

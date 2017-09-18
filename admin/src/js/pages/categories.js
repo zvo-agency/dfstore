@@ -3,7 +3,6 @@
   var categoriesList = document.querySelector('#categories_list');
   if(categoriesList) {
     var categories;
-    alert('ok');
 
     $.ajax({
       type: "POST",

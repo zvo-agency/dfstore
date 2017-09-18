@@ -32,4 +32,44 @@
   &__row {
     padding-bottom: 15px;
   }  
+  &__blank {
+    width: 100%;
+    max-width: $input-max-width;
+    label {
+      @extend .input-label;
+    }
+  }
+  &__blankCol {
+    flex-grow: 1;
+    &:nth-last-child(2):first-child {
+      padding-right: 5px;
+    }
+    &:nth-child(2):last-child {
+      padding-left: 5px;
+    }
+  }
+  &__blankRow {
+    &--radio, &--checkboxes {
+      padding-left: 10px;
+      display: flex;
+      padding-top: 10px;
+      .c-radio {
+        margin-right: 15px;
+      }
+      .c-checkbox {
+        margin-right: 20px;
+      }
+    }
+    &--flex {
+      display: flex;
+    }
+    &--colors {
+      flex-wrap: wrap;
+      padding-left: 5px; 
+      .c-radio {
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
